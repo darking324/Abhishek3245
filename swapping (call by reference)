@@ -1,0 +1,17 @@
+#include<stdio.h>                     // function declaring
+swap(int *, int *);
+int main() 
+{
+    int x, y;
+    printf("Enter the values of x and y:\n");
+    scanf("%d %d", &x, &y);
+    printf("\nValues before swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);                     // function calling
+    printf("\nValues after swap: x = %d, y = %d\n", x, y);
+}
+
+swap(int *a, int *b)                  // function definition
+{
+    int temp = *a;                   
+    *b = temp;
+}
