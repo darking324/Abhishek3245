@@ -1,0 +1,20 @@
+#include<stdio.h> 
+
+int swap(int, int);  // Function declaration
+
+int main() 
+{
+    int x, y;
+    printf("Enter the values of x and y:\n");
+    scanf("%d %d", &x, &y);
+    printf("\nValues before swap: x = %d, y = %d\n", x, y);
+    swap(x, y);  // Function calling (pass by value)
+    printf("\nValues after swap: x = %d, y = %d\n", x, y);
+}
+
+int swap(int a, int b)  // Function definition (call by value)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
