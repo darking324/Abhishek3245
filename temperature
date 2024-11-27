@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() 
+{
+    char unit;
+    float temp, convertedTemp;
+
+    printf("Enter 'C' for Celsius or 'F' for Fahrenheit: ");
+    scanf(" %c", &unit);
+
+    if (unit == 'C' || unit == 'c') 
+    {
+        printf("Enter temperature in Celsius: ");
+        scanf("%f", &temp);
+        convertedTemp = (temp * 9 / 5) + 32;  // Convert to Fahrenheit
+        printf("Temperature in Fahrenheit: %.2f\n", convertedTemp);
+    } 
+    else if (unit == 'F' || unit == 'f') 
+    {
+        printf("Enter temperature in Fahrenheit: ");
+        scanf("%f", &temp);
+        convertedTemp = (temp - 32) * 5 / 9;  // Convert to Celsius
+        printf("Temperature in Celsius: %.2f\n", convertedTemp);
+    } 
+    else 
+    {
+        printf("Invalid input! Please enter 'C' or 'F'.\n");
+    }
+
+    return 0;
+}
