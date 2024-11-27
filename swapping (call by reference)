@@ -1,5 +1,5 @@
 #include<stdio.h>                     // function declaring
-swap(int *, int *);
+int swap(int *, int *);
 int main() 
 {
     int x, y;
@@ -10,8 +10,9 @@ int main()
     printf("\nValues after swap: x = %d, y = %d\n", x, y);
 }
 
-swap(int *a, int *b)                  // function definition
+int swap(int *a, int *b)                  // function definition
 {
-    int temp = *a;                   
+    int temp = *a;
+    *a = *b;
     *b = temp;
 }
